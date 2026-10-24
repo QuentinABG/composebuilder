@@ -853,6 +853,45 @@
   #xp .xp-brand span { display: none; }
   #xp .xp-apps { max-height: none; }
 }
+/* ── Tablette et mobile : rien ici ne s'applique au-dessus de 1024 px ── */
+@media (max-width: 1024px) {
+  #xp .xp-cta { display: none; }
+  #xp .xp-pills { flex: 1 1 auto; }
+  #xp .xp-form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #xp .xp-field.wide { grid-column: span 2; }
+}
+@media (max-width: 760px) {
+  #xp .xp-sec { padding: 84px 16px 40px; }
+  #xp .xp-bar { top: 10px; gap: 4px; padding: 6px 8px; max-width: calc(100% - 16px); }
+  #xp .xp-brand { margin-right: 0; padding: 0 2px; }
+  #xp .xp-pills { margin: 0 4px; gap: 4px; }
+  #xp .xp-pill { padding: 6px 10px; font-size: 12px; }
+  #xp .xp-ico-btn { width: 30px; height: 30px; }
+  #xp .xp-lang button { padding: 6px 7px; font-size: 11px; }
+  #xp .xp-mark.big { width: 84px; height: 84px; margin-bottom: 14px; }
+  #xp .xp-flo { opacity: .28; width: calc(var(--w, 72px) * .62) !important; height: calc(var(--w, 72px) * .62) !important; }
+  #xp .xp-flo:nth-child(n+15) { display: none; }
+  #xp .xp-ghost { font-size: 19px; }
+  #xp .xp-search { font-size: 16px; }
+  #xp .xp-field.wide { grid-column: span 2; }
+  #xp .xp-form { gap: 10px; }
+  #xp .xp-stats { gap: 18px; }
+  #xp .xp-cfg-h { padding: 11px 12px; }
+  #xp .xp-cfg-b { padding: 4px 12px 14px; }
+  #xp .xp-guide .card { padding: 16px; border-radius: 16px; }
+  #xp .xp-guide .card > h2 { flex-wrap: wrap; font-size: 16px; }
+  #xp .xp-guide .card > h2 .hint { margin-left: 0; width: 100%; }
+  #xp .xp-guide .cmd-box pre { overflow-x: auto; font-size: 12px; }
+  #xp .xp-guide dl.kv { display: block; }
+  #xp .xp-guide dl.kv dd { margin: 0 0 8px; overflow-wrap: anywhere; }
+  #xp .xp-privacy { font-size: 11.5px; }
+  /* Bulles d'aide : sur téléphone, elles s'ouvrent au toucher, en bas de l'écran */
+  #xp .xp-tipb { position: fixed; left: 12px; right: 12px; bottom: 16px; top: auto; transform: none; width: auto; max-width: none; z-index: 2147483000; }
+  #xp .xp-tipb::after { display: none; }
+}
+@media (hover: none) {
+  #xpPillTip { display: none !important; }
+}
 @media (prefers-reduced-motion: reduce) {
   #xp { scroll-behavior: auto; }
   /* Animations réduites dans le système : les logos bougent quand même, deux fois plus lentement. */
